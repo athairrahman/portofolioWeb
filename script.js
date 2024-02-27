@@ -23,3 +23,20 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 })
+
+// scroll animate
+const myTop = document.querySelector('.myTop');
+
+window.addEventListener('scroll', function () {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        myTop.style.display = "block";
+    } else {
+        myTop.style.display = 'none';
+    }
+})
+
+myTop.addEventListener('click', function myTopEvent() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+} )
+
